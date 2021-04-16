@@ -11,8 +11,10 @@ run: compile
 	./$(BIN) $(PARAMETERS)
 
 compile:
-	# gcc -Wall -Wpedantic -std=c18 tree.c -o tree
 	$(CC) $(FLAGS) $(FILES) -o $(BIN)
 
-deploy:
+deploy: clean
 	$(CC) $(FLAGS) $(DEPLOY_EXTRA_FLAGS) $(FILES) -o $(DEPLOY_PATH)$(BIN)
+
+clean:
+	$(RM) $(BIN)

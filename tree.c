@@ -77,7 +77,7 @@ int main(int argc, char ** argv) {
     for (int i = 0; i < BUFFSIZE; ++i) prefixes[i] = NULL;
 
     if (!root || root->head.subdirs == NULL) {
-        fprintf(stderr, "%s is an empty directory", dir);
+        fprintf(stderr, "%s is an empty directory\n", dir);
         exit(1);
     }
 
